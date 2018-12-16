@@ -73,8 +73,10 @@ def signup(request):
   try:
    ret = user.objects.create(username=username, password=password, email=email)
   except Exception as e:
-   
-   return render(request, "home/home.html")
+   context={"error":'already used username'}
+
+
+   return render(request, "home/signup.html",context)
   if ret:
    return render(request, "home/login.html")
 
