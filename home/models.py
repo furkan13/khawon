@@ -12,3 +12,5 @@ class restaurant(models.Model):
     tag=models.CharField(default='',max_length=500)
     location=models.CharField(default='',max_length=100)
 
+
+

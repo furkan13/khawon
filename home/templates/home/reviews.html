@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Review | Khawoon</title>
+{%  extends 'home/base.html' %}
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+{% block content %}
 
 
-<div class="container">
-    <div>
-        <ul>
-            <li><img src="logo.png" width="80" height="50"></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="reviews.html" class="active">Reviews</a></li>
-            <li><a href="discounts.html">Discounts</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li style="float:right"><a href="login.html">Login/Sign Up</a></li>
-
-        </ul>
-    </div>
-</div>
 
 <div class="content" style=" display : flex ; flex-direction: column">
     <h2 style="text-decoration: underline">Reviews</h2>
@@ -33,7 +14,4 @@
        </span>
 
 
-</div>
-</div>
-</body>
-</html>
+{% endblock %}

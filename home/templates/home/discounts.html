@@ -1,43 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Discounts | Khawoon</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
 
-<div class="container">
-    <div>
-        <ul>
-            <li><img src="logo.png" width="80" height="50"></li>
-            <li><a href="home.html" >Home</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="discounts.html" class="active">Discounts</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li style="float:right"><a href="login.html">Login/Sign Up</a></li>
+{% extends 'home/base.html' %}
 
-        </ul>
-    </div>
-    <div class="sidebar">
-        <h2 style="text-align: center;color: darkred;">Trending</h2>
-        <div style="width: 80%; margin: auto;">
-            <img src="takeout.jpeg" width="100%">
-            <img src="sultan.png" width="100%">
-            <img src="chillox.jpeg" width="100%">
-        </div>
-    </div>
-    <div class="content" style=" display : flex ; flex-direction: column">
-        <div>
-            <input type="text" name="" placeholder="I am Hungry for...."
-                   style="border-radius: 50px;width: 450px;height: 45px;font-size: 20px;padding-left: 20px;margin-right: 30px">
-            IN <input type="text" name="" placeholder="Area"
-                      style="border-radius: 50px; width: 200px; height: 45px;font-size: 20px;padding-left: 10px;margin-left: 20px">
-            <a href="search.html">
-                <img src="search.png" style="width: 45px;height: 40px;padding-left:10px;margin-left:10px;border:0;">
-            </a>
-        </div>
+
+ {% block content %}
+
             <div style="   width: 100% ;margin: 0;border: darkred;margin-top: 5%">
 
                 <div style=" padding: 0;background-color: #cccccc;float: left;margin-right: 5px;margin-bottom: 5px;">
@@ -69,8 +36,6 @@
                     </p>
                 </div>
 
-    </div>
-</div>
-</div>
-</body>
-</html>
+            </div>
+{% endblock %}
+

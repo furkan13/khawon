@@ -54,6 +54,12 @@ def log_out(request):
 
   return render(request,'home/home.html')
 
+def reviews(request):
+ return render(request,"home/reviews.html")
+
+def discounts(request):
+ return render(request,"home/discounts.html")
+
 
 
 
