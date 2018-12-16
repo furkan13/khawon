@@ -13,7 +13,8 @@ urlpatterns = [
      url(r'^log_out/$',views.log_out,name='logout'),
      url(r'^reviews/$',views.reviews,name='reviews'),
     url(r'^discounts/$', views.discounts, name='discounts'),
-    url(r'^reviews/$', views.reviews, name='reviews'),
+
+     url(r'^signup/$', views.signup, name='signup'),
 
 
 ]

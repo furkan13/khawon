@@ -1,10 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+ {%load static%}
+    <title>login</title>
+    <style>
+        body {
+            background: url({% static 'home/bc.png'%})no-repeat;
+            background-size: cover;
+            height: 100%;
+            position: center;
+            font-family: sans-serif;
+            display: block;
+        }
+
+        .loginbox {
+            width: 320px;
+            height: 450px;
+            background: aliceblue;
+            color: #ffffff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            border: lightblue;
+            border-style: solid;
+
+        }
+
+        .logo {
+            width: 100px;
+            height: 80px;
+            border-radius: 50%;
+            top: 4%;
+        }
+
+        .container {
+            padding: 16px;
+            text-align: center;
+        }
+
+        .login-box input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .login-box input[type=text], input[type=password] {
+            width: 100%;
+            padding: 13px 15px;
+            margin: 12px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            top: 20%;
+        }
+
+        button {
+            background-color: white;
+            color: red;
+            padding: 13px 15px;
+            margin: 8px;
+            border: 2px;
+            border-style: solid;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 50%;
+            font-family: "sans-serif";
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        input:hover,
+        .btn:hover {
+            opacity: 1;
+        }
+
+        .fb {
+            background-color: #3B5998;
+            color: white;
+        }
+
+        .google {
+            background-color: #dd4b39;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
+<div class="loginbox" id="login">
+    <div class="container">
+        <div style="text-align: center">
+            <img src={% static 'home/logo.png'%} class="logo">
+        </div>
+        <div class="login-box">
+            <form method ="POST">
+                    {% csrf_token %}
+                                   <input type="text" name="username" placeholder="Enter Username" required v-model=username>
+                 <input type="email" name="email" placeholder="Enter email adress" required v-model="email">
+
+
+                <input type="Password" name="password" placeholder="Enter Password" required v-model="password">
+
+
+
+
+ <button type="submit" >Sign up</button>
+
+
+
+      <p>{{error}}</p>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
 </body>
 </html>
+
+
