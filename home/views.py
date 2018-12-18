@@ -34,13 +34,16 @@ def log_in(request):
   username = request.POST.get('username')
   password = request.POST.get('password')
 
+
   user = authenticate(request, username=username, password=password)
   print(user)
+  if user:
+   login(request,user)
+   return HttpResponseRedirect(reverse('home'))
+  else:
+   return render(request, "home/login.html")
 
-  login(request,user)
-  return HttpResponseRedirect(reverse('home'))
- else:
-  return render(request,"home/login.html")
+
 
 
 
@@ -72,13 +75,27 @@ def signup(request):
 
   try:
    ret = user.objects.create(username=username, password=password, email=email)
+
+
+
+
+
   except Exception as e:
    context={"error":'already used username'}
 
 
    return render(request, "home/signup.html",context)
   if ret:
-   return render(request, "home/login.html")
+
+      login(request,ret)
+      return HttpResponseRedirect(reverse('home'))
+
+
+
+
+
+
+
 
  return render(request, "home/signup.html")
 
