@@ -17,8 +17,8 @@
              {%if user.is_authenticated%}
             <li><img src={% static 'home/logo.png'%} width="80" height="50"></li>
             <li><a href={%url "home"%} class="active">Home</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="discounts.html">Discounts</a></li>
+            <li><a href={%url "reviews"%}>Reviews</a></li>
+            <li><a href={%url "discounts"%}>Discounts</a></li>
             <li><a href="#">Contact Us</a></li>
                <li style="float:right"><a href={%url "login"%}>Account</a></li>
             <li style="float:right"><a href={%url "logout"%}>logout</a></li>
@@ -26,8 +26,8 @@
             {%else%}
                  <li><img src={% static 'home/logo.png'%} width="80" height="50"></li>
             <li><a href={%url "home"%} class="active">Home</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="discounts.html">Discounts</a></li>
+           <li><a href={%url "reviews"%}>Reviews</a></li>
+            <li><a href={%url "discounts"%}>Discounts</a></li>
             <li><a href="#">Contact Us</a></li>
             <li style="float:right"><a href={%url "login"%}>Login/Sign Up</a></li>
 
@@ -59,37 +59,20 @@
                    style="border-radius: 50px;width: 450px;height: 45px;font-size: 20px;padding-left: 20px;margin-right: 30px">
             IN <input type="text" name='q' placeholder="Area"
                       style="border-radius: 50px; width: 200px; height: 45px;font-size: 20px;padding-left: 10px;margin-left: 20px">
-             
+
             <input type='submit'value='search'/>
-                
+
               </form>
 
             </a>
         </div>
-        <div style="   width: 100% ;margin: 0;border: darkred">
-            <p style="padding: 16px 16px ; background: firebrick; color: white; font-size: 30px; text-align: center;">
-                Trending</p>
-            <img class="img-inline" src={% static 'home/food1.jpg' %} width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food2.jpg' %} width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food3.jpg' %} width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food4.jpeg' %} width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food5.jpg' %} width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food6.png' %} width="300px" height="160">
+
+        {% block content %}
 
 
-        </div>
+    {% endblock %}
 
-        <div style="width: 100%; border: darkred">
-            <p style="padding: 20px;background: antiquewhite;color: darkred;font-size: 30px;text-align: center;">Hot
-                Deals</p>
-            <img class="img-inline" src={% static 'home/food7.jpg'%} width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food8.jpg'%}  width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food9.jpg'%}  width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food10.jpg'%} width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food11.jpg'%} width="300px" height="160">
-            <img class="img-inline" src={% static 'home/food12.jpg'%} width="300px" height="160">
-        </div>
-    </div>
-</div>
+
+
 </body>
 </html>
