@@ -1,17 +1,200 @@
-{%  extends 'home/base.html' %}
-
-{% block content %}
+{% extends 'home/base.html' %}
 
 
+ {% block content %}
 
-<div class="content" style=" display : flex ; flex-direction: column">
-    <h2 style="text-decoration: underline">Reviews</h2>
-    <div style="padding-left: 30px">
-        <span style="text-decoration: double">
+   <div class="content" style=" display : flex ; flex-direction: column;margin:0px">
+    {%if user.is_authenticated%}
+	 <button type="submit"button onclick="document.getElementById('popup').style.display='block'" style="font-size:20px">Share Your Experience</button>
+       else
+		
+	  <h2 style="text-decoration: underline;padding-left: 150px;margin:-10px;">Reviews:</h2>
+         <div style="padding-left: 120px;margin:30px;">
 
-        <img src="person.jpg" width="80" height="60">
-           <p style="padding-left: 5px">Maisha Farzana</p>
-       </span>
+            <span style="text-decoration: double">
 
+            <img src="person.png" width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid;">
+            </span>
+
+        <div style="padding-left:100px;margin: -60px 5px;">
+            <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;"><b> Maisha Farzana</b></p>
+               <p style="padding-left: 5px;background-color:white;margin:10px auto;"><b>Restaurant Name:</b> Pizza Burg</p>
+               <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Restaurant Rating:</b> &#9733;&#9733;&#9733;&#9733;</span>
+               <p style="padding-left: 5px;background-color:white;margin:7px auto;"><b>Food Item:</b> Beef Carnival Pizza</p>
+               <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Food Rating:</b>&#9733;&#9733;&#9733;</span>
+               <p style="padding-left: 5px;margin:6px auto;"><b>Description:</b> The pizza was too good and cheesy.
+                                             Must try item.</p>
+                <img src="pizza1.jpg"  width="100" height="80" style="margin:10px auto;">
+                <img src="pizza2.jpg"  width="100" height="80" style="margin:10px auto;">
+                <br>
+                <div class="stars"style="margin-right:700px">
+                    <span style="font-size:20px;margin-left:0px;color:black;"><b>Rate Reviewer:</b></span>
+                    <input class="star star-5" id="star-5" type="radio" name="star"/>
+                    <label class="star star-5" for="star-5"></label>
+                    <input class="star star-4" id="star-4" type="radio" name="star"/>
+                    <label class="star star-4" for="star-4"></label>
+                    <input class="star star-3" id="star-3" type="radio" name="star"/>
+                    <label class="star star-3" for="star-3"></label>
+                    <input class="star star-2" id="star-2" type="radio" name="star"/>
+                    <label class="star star-2" for="star-2"></label>
+                    <input class="star star-1" id="star-1" type="radio" name="star"/>
+                    <label class="star star-1" for="star-1"></label>
+                </div>
+
+                <div style="float:right;margin:-30px 550px">
+					<a href="#" style="background-color:white;color: black;font-size:20px; margin:6px auto;"
+					button onclick="document.getElementById('popup').style.display='none'"><b>Comment</b></a>
+				</div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-left: 120px;margin:25px">
+
+        <span style="text-decoration: double;">
+			<img src="person.png" width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid;">
+        </span>
+
+        <div style="padding-left:100px;margin: -60px 5px;">
+            <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;"><b> Samia Ellin</b></p>
+                <p style="padding-left: 5px;background-color:white;margin:10px auto;"><b>Restaurant Name:</b> Melt Town</p>
+                <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Restaurant Rating:</b> &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <p style="padding-left: 5px;background-color:white;margin:7px auto;"><b>Food Item:</b> Pasta Basta</p>
+                <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Food Rating:</b> &#9733;&#9733;&#9733;&#9733;</span>
+                <p style="padding-left: 5px;margin:6px auto;"><b>Description:</b> Amazing taste. Best pasta ever. Amazing offer going on. 3 baked pasta at tk. 399.<br/> And a good place to hangout with friends.</p>
+                <img src="Pasta.jpg"  width="100" height="80" style="margin:10px auto;">
+
+                <br>
+                <div class="stars1"style="margin-right:700px">
+                    <span style="font-size:20px;margin-left:00px;color:black;"><b>Rate Reviewer:</b></span>
+                    <input class="star star-f5" id="star-f5" type="radio" name="star1"/>
+                    <label class="star star-f5" for="star-f5"></label>
+                    <input class="star star-f4" id="star-f4" type="radio" name="star1"/>
+                    <label class="star star-f4" for="star-f4"></label>
+                    <input class="star star-f3" id="star-f3" type="radio" name="star1"/>
+                    <label class="star star-f3" for="star-f3"></label>
+                    <input class="star star-f2" id="star-f2" type="radio" name="star1"/>
+                    <label class="star star-f2" for="star-f2"></label>
+                    <input class="star star-f1" id="star-f1" type="radio" name="star1"/>
+                    <label class="star star-f1" for="star-f1"></label>
+                </div>
+				
+				<div style="float:right;margin:-30px 550px">
+					<a href="#" style="background-color:white;color: black;font-size:20px; margin:6px auto;"
+					button onclick="document.getElementById('popup').style.display='none'"><b>Comment</b></a>
+				</div>
+				
+                <hr>
+            </div>
+        </div>
+    </div>
+    </div>
+
+	<div id="popup" class="overlay">	
+		
+		<div class="bg-modal">
+			
+			<div class="modal-contents">
+				<a href="#" class="closeBtn"button onclick="document.getElementById('popup').style.display='none'">&times;</a>
+				
+				<div style="text-align: center">
+					<img src="logo.png" class="img">
+				</div>
+
+
+				<div class="Form">
+					<form action="">
+						<p style="background:aliceblue; color:red; margin:6px auto; font-size:25px">Review From</p>
+						<input type="text"style="margin:6px auto;"placeholder="Restaurant Name">
+
+						<div class="stars2"style="margin-right:130px">	
+							<span style="font-size:20px;margin-left:100px;color:black;">Restaurant Rating:</span>
+							<input class="star star-fa5" id="star-fa5" type="radio" name="star2"/>
+							<label class="star star-fa5" for="star-fa5"></label>
+							<input class="star star-fa4" id="star-fa4" type="radio" name="star2"/>
+							<label class="star star-fa4" for="star-fa4"></label>
+							<input class="star star-fa3" id="star-fa3" type="radio" name="star2"/>
+							<label class="star star-fa3" for="star-fa3"></label>
+							<input class="star star-fa2" id="star-fa2" type="radio" name="star2"/>
+							<label class="star star-fa2" for="star-fa2"></label>
+							<input class="star star-fa1" id="star-fa1" type="radio" name="star2"/>
+							<label class="star star-fa1" for="star-fa1"></label>
+						</div>
+				
+						<input type="text"style="margin:6px auto;"placeholder="Food">
+
+						<div class="stars3"style="margin-right:130px">
+							<span style="font-size:20px;margin-left:50px;color:black;">Food Rating:</span>
+							<input class="star star-fb5" id="star-fb5" type="radio" name="star3"/>
+							<label class="star star-fb5" for="star-fb5"></label>
+							<input class="star star-fb4" id="star-fb4" type="radio" name="star3"/>
+							<label class="star star-fb4" for="star-fb4"></label>
+							<input class="star star-fb3" id="star-fb3" type="radio" name="star3"/>
+							<label class="star star-fb3" for="star-fb3"></label>
+							<input class="star star-fb2" id="star-fb2" type="radio" name="star3"/>
+							<label class="star star-fb2" for="star-fb2"></label>
+							<input class="star star-fb1" id="star-fb1" type="radio" name="star3"/>
+							<label class="star star-fb1" for="star-fb1"></label>
+						</div>
+
+						<input type="text"style="margin:10px auto;"placeholder="Description">
+				
+						<fieldset style="border-radius:10px;background:white;border:1px solid #ccc;width:200px;padding-left:0px;margin-left:150px;">
+							<legend style="background-color:white; color:#837C83;border: 1px solid #ccc;
+				            border-radius: 10px;">Upload valid photo or video</legend>
+							<input style="margin:6px auto;"type="file" name="multiplefileupload" multiple/>
+						</fieldset>
+					</form>
+				</div>
+			
+				<button  class="post" type="submit" style="background-color: white;color: red;
+	                            margin: 10px 200px;border: 2px;border-style: solid;border-radius: 8px;cursor: pointer;width: 25%;
+	                            " @click="goToHome()">Post</button>
+								
+			</div>
+		</div>		
+	</div><br><br>
+</div>
+
+	<footer id="tfooter">
+		<div id="mom" Style="width:100%;height:500px;background:black">
+			<div id="mommy" >
+
+				<div id="kid1" style="color:white;text-align:center;">
+					<p style="font-size:25px;"><b>Discover</b></p>
+					<p style="font-size:22px;">Home</p>
+					<p style="font-size:22px;">Review</p>
+					<p style="font-size:22px;">Discount</p>
+				</div>
+				<div id="kid2" style="color:white;text-align:center;">
+					<p style="font-size:25px;"><b>Trending</b></p>
+					<p style="font-size:22px;">Pizza</p>
+					<p style="font-size:22px;">Pasta</p>
+					<p style="font-size:22px;">Burger</p>
+					<p style="font-size:22px;">Kacchi</p>
+				</div>
+				<div id="kid3" style="color:white;text-align:center;">
+					<p style="font-size:25px;"><b>New In Town</b></p>
+					<p style="font-size:22px;">Dhanmondi</p>
+					<p style="font-size:22px;">Banani</p>
+					<p style="font-size:22px;">Gulshan</p>
+					<p style="font-size:22px;">Uttara</p>
+				</div>
+				<div id="kid4" style="color:white;text-align:center;">
+					<p style="font-size:25px;"><b>User</b></p>
+					<p style="font-size:22px;">Sign In</p>
+					<p style="font-size:22px;">Create New Account</p>
+					<p style="font-size:22px;">FAQ</p>
+				</div>
+			</div>
+			<hr>
+			<img src="Footer.png" width="200" height="60"style="padding-left:40px">
+			<br>
+			<p style="color:white;font-size:18px;padding-left:40px;">© 2018 Khawoon. All Rights Reserved.</p>
+		</div>
+	</footer>
+
+</body>
 
 {% endblock %}

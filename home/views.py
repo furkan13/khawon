@@ -100,3 +100,8 @@ def signup(request):
  return render(request, "home/signup.html")
 
 
+
+
+
+
+
