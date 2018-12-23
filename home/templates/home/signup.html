@@ -101,8 +101,10 @@
         <div class="login-box">
             <form method ="POST">
                     {% csrf_token %}
+                <p style="padding-left: 5px;color: red;  border: 1px solid #ccc; border-radius: 10px;margin: 0">{{ error }}</p>
+
                                    <input type="text" name="username" placeholder="Enter Username" required v-model=username>
-                 <input type="email" name="email" placeholder="Enter email adress" required v-model="email">
+                 <input type="text" name="email" placeholder="Enter email adress" required v-model="email">
 
 
                 <input type="Password" name="password" placeholder="Enter Password" required v-model="password">
@@ -114,7 +116,6 @@
 
 
 
-      <p>{{error}}</p>
 
             </form>
 
