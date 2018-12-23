@@ -6,7 +6,10 @@
    <div class="content" style=" display : flex ; flex-direction: column;margin:0px">
     {%if user.is_authenticated%}
 	 <button type="submit"button onclick="document.getElementById('popup').style.display='block'" style="font-size:20px">Share Your Experience</button>
-       else
+       {% else%}
+
+        <button type="submit"button onclick="document.getElementById('popup').style.display='block'" style="font-size:20px">Share Your Experience</button>
+       {% endif %}
 		
 	  <h2 style="text-decoration: underline;padding-left: 150px;margin:-10px;">Reviews:</h2>
          <div style="padding-left: 120px;margin:30px;">
