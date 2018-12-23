@@ -1,18 +1,57 @@
-{% extends 'home/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<body style='font-family="source-sans-variable"'>
+<body bgcolor="LightGray">
+<head>
+    <meta charset="UTF-8">
+    <title>Review| Khawoon</title>
+     {%load static%}
 
 
- {% block content %}
+    <link rel="stylesheet" href={% static 'home/ReviewStyle.css' %}>
+</head>
 
-   <div class="content" style=" display : flex ; flex-direction: column;margin:0px">
+<body>
+<div style=" display : flex ; flex-direction: column;margin:0px">
+<div class="container">
+    <div>
+        <ul>
+             {%if user.is_authenticated%}
+            <li><img src={% static 'home/logo.png'%} width="80" height="50"></li>
+            <li><a href={%url "home"%} class="active">Home</a></li>
+            <li><a href={%url "reviews"%}>Reviews</a></li>
+            <li><a href={%url "discounts"%}>Discounts</a></li>
+            <li><a href="#">Contact Us</a></li>
+               <li style="float:right"><a href={%url "login"%}>Account</a></li>
+                 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+            <li style="float:right"><a href={%url "logout"%}>logout</a></li>
+
+            {%else%}
+                 <li><img src={% static 'home/logo.png'%} width="80" height="50"></li>
+            <li><a href={%url "home"%} class="active">Home</a></li>
+           <li><a href={%url "reviews"%}>Reviews</a></li>
+            <li><a href={%url "discounts"%}>Discounts</a></li>
+            <li><a href="#">Contact Us</a></li>
+                 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+            <li style="float:right"><a href={%url "login"%}>Login/Sign Up</a></li>
+
+        </ul>
+          {%endif%}
+    </div>
+
+</div>
+
+<div class="content" style=" display : flex ; flex-direction: column;margin:0px">
     {%if user.is_authenticated%}
-	 <button type="submit"button onclick="document.getElementById('popup').style.display='block'" style="font-size:20px">Share Your Experience</button>
-       {% else%}
+	<button type="submit"button onclick="document.getElementById('popup').style.display='block'" style="font-size:20px">Share Your Experience</button>
+     {%else%}
 
+    <form action={%url "login"%}>
         <button type="submit"button onclick="document.getElementById('popup').style.display='block'" style="font-size:20px">Share Your Experience</button>
-       {% endif %}
+        {% endif %}
 		
-	  <h2 style="text-decoration: underline;padding-left: 150px;margin:-10px;">Reviews:</h2>
-         <div style="padding-left: 120px;margin:30px;">
+	<h2 style="text-decoration: underline;padding-left: 150px;margin:-10px;">Reviews:</h2>
+    <div style="padding-left: 120px;margin:30px;">
 
             <span style="text-decoration: double">
 
@@ -92,7 +131,7 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
 
 	<div id="popup" class="overlay">	
 		
@@ -200,4 +239,4 @@
 
 </body>
 
-{% endblock %}
+</html>

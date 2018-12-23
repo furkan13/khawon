@@ -20,7 +20,8 @@
             <li><a href={%url "home"%} class="active">Home</a></li>
             <li><a href={%url "reviews"%}>Reviews</a></li>
             <li><a href={%url "discounts"%}>Discounts</a></li>
-            <li><a href="#">Contact Us</a></li>
+           <li><a href="contact.html">Contact Us</a></li>
+			<li><a href="team.html">Team</a></li>
                  <li style="float:right"><a href={%url "login"%}>Account</a></li>
             <li style="float:right"><a href={%url "logout"%}>logout</a></li>
 
@@ -29,7 +30,8 @@
             <li><a href={%url "home"%} class="active">Home</a></li>
            <li><a href={%url "reviews"%}>Reviews</a></li>
             <li><a href={%url "discounts"%}>Discounts</a></li>
-            <li><a href="#">Contact Us</a></li>
+           <li><a href="contact.html">Contact Us</a></li>
+			<li><a href="team.html">Team</a></li>
             <li style="float:right"><a href={%url "login"%}>Login/Sign Up</a></li>
 
         </ul>
@@ -39,14 +41,38 @@
         <h2 style="text-align: center;color: firebrick; flex: auto ">Events</h2>
         <div style="width: 80%;margin: auto;color: honeydew; line-height: 27px">
 
-            <ul style="background-color: aliceblue ;color:red">
-                <li>**Winter food festival at Four seasons,Dhaka**</li>
-                <li>**Fuchka festival at Dhanmondi Sayeedena community Center**</li>
-                <li>**Pitha utshab at Dhanmondi Lake**</li>
-                <li>**Burger challange at Takeout**</li>
-                <li>**Burger Festival at Uttara club**</li>
-                <li>**Igloo Ice cream mania at BICC**</li>
+           <ul class="sidetxt">
+                <li><b>**Winter food festival**</b><br />
+                    Date: 5th January<br />
+                    From 10.00am-11.00pm<br />
+                    At Four Seasons Restaurant, Dhanmondi<br /><br /></li>
+
+                <li><b>**Fuchka festival**</b><br />
+                    Date: 28th December<br />
+                    From 11.00am-8.00pm<br />
+                    at Dhanmondi Sayeedena community Center<br /><br /></li>
+
+                <li><b>**Pitha utshab**</b><br />
+                    Date: 20th December-1st January<br />
+                    From 8.00am-4.00pm<br />
+                    At Robindro Shoroboro Dhanmondi Lake<br /><br /></li>
+
+                <li><b>**Unlimited Burger challange**</b><br />
+                    Date: 24th December-6th January<br />
+                    From 10am-6pm<br />
+                    At Takeout Banani<br /><br /></li>
+
+                <li><b>**Burger Festival**</b><br />
+                    Date: 6th January<br />
+                    From 4.00pm-10.00pm<br />
+                    At Uttara club<br /><br /></li>
+
+                <li><b>**Igloo Ice cream mania**</b><br />
+                    Date: 24th December<br />
+                    From 3.00pm-9.00pm<br />
+                    At BICC, Bashundhara</li>
             </ul>
+
 
 
         </div>
@@ -54,7 +80,7 @@
     <div class="content" style=" display : flex ; flex-direction: column;">
         <div >
 
-            <form method='GET' action=''>
+            <form method='GET' action={% url "search" %}>
                 <input type="text" name='q' placeholder="I am Hungry for...."
 
                        style="border-radius: 50px;width: 450px;height: 45px;font-size: 20px;padding-left: 20px;margin-right: 30px;margin-top: 20px">

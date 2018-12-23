@@ -1,5 +1,8 @@
 from django.shortcuts import render,HttpResponse,redirect,HttpResponseRedirect
+from django.db.models import  Q
 from django.urls import reverse
+from .models import restaurant
+
 from django.template.context_processors import csrf
 from django.contrib.auth import (
 authenticate,
@@ -11,7 +14,7 @@ logout,
 )
 
 
-from login.models import customer
+
 
 user=get_user_model()
 
@@ -103,5 +106,9 @@ def signup(request):
 
 
 
-
+def search(request):
+ template='home/search.html'
+ query=request.GET.get('q')
+ results=restaurant.objects.filter(Q(name__icontains=query) | Q(tag__icontains=query))
+ return render(request,template)
 

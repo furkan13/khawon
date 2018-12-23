@@ -16,6 +16,7 @@ urlpatterns = [
     url(r'^discounts/$', views.discounts, name='discounts'),
 
      url(r'^signup/$', views.signup, name='signup'),
+    url(r'^search/$', views.search, name='search'),
 
 
 ]
