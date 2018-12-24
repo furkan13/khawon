@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<body style='font-family="source-sans-variable"'>
+<body style:'font-family="source-sans-variable"'>
 <body bgcolor="LightGray">
 <head>
     <meta charset="UTF-8">
@@ -14,25 +14,29 @@
 <body>
 <div style=" display : flex ; flex-direction: column;margin:0px">
 <div class="container">
-    <div>
-        <ul>
+
+     <div id="navbar" style="margin-bottom: 40px">
+        <ul class="sticky" style=" position: fixed;">
+
              {%if user.is_authenticated%}
-            <li><img src={% static 'home/logo.png'%} width="80" height="50"></li>
-            <li><a href={%url "home"%} class="active">Home</a></li>
-            <li><a href={%url "reviews"%}>Reviews</a></li>
+            <li><img src={% static 'home/logo.png'%} width="80" height="50"style="margin-top: 6px;margin-right: 200px"></li>
+            <li><a href={%url "home"%} >Home</a></li>
+            <li><a href={%url "reviews"%}>Reviews class="active"</a></li>
             <li><a href={%url "discounts"%}>Discounts</a></li>
-            <li><a href="#">Contact Us</a></li>
-               <li style="float:right"><a href={%url "login"%}>Account</a></li>
-                 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+           <li><a href="contact.html">Contact Us</a></li>
+			<li><a href="team.html">Team</a></li>
+                 <li style="float:right"><a href={%url "login"%}>Account</a></li>
+                  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
             <li style="float:right"><a href={%url "logout"%}>logout</a></li>
 
             {%else%}
-                 <li><img src={% static 'home/logo.png'%} width="80" height="50"></li>
-            <li><a href={%url "home"%} class="active">Home</a></li>
-           <li><a href={%url "reviews"%}>Reviews</a></li>
+                 <li><img src={% static 'home/logo.png'%} width="80" height="50"tyle="margin-top: 6px;margin-right: 200px"></li>
+            <li><a href={%url "home"%} >Home</a></li>
+           <li><a href={%url "reviews"%}class="active">Reviews</a></li>
             <li><a href={%url "discounts"%}>Discounts</a></li>
-            <li><a href="#">Contact Us</a></li>
-                 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+           <li><a href="contact.html">Contact Us</a></li>
+                  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+			<li><a href="team.html">Team</a></li>
             <li style="float:right"><a href={%url "login"%}>Login/Sign Up</a></li>
 
         </ul>
@@ -55,19 +59,19 @@
 
             <span style="text-decoration: double">
 
-            <img src="person.png" width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid;">
+            <img src={% static 'home/maisha.jpg'%} width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid;">
             </span>
 
-        <div style="padding-left:100px;margin: -60px 5px;">
-            <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;"><b> Maisha Farzana</b></p>
-               <p style="padding-left: 5px;background-color:white;margin:10px auto;"><b>Restaurant Name:</b> Pizza Burg</p>
-               <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Restaurant Rating:</b> &#9733;&#9733;&#9733;&#9733;</span>
-               <p style="padding-left: 5px;background-color:white;margin:7px auto;"><b>Food Item:</b> Beef Carnival Pizza</p>
-               <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Food Rating:</b>&#9733;&#9733;&#9733;</span>
-               <p style="padding-left: 5px;margin:6px auto;"><b>Description:</b> The pizza was too good and cheesy.
+        <div style="padding-left:100px;margin: -60px 5px;background-color:lightgray">
+            <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;background-color:lightgray"><b> Maisha Farzana</b></p>
+               <p style="padding-left: 5px;background-color:white;margin:10px auto;background-color:lightgray"><b>Restaurant Name:</b> Pizza Burg</p>
+               <span style="padding-left: 5px;background-color: white;margin:6px auto;background-color:lightgray"><b>Restaurant Rating:</b> &#9733;&#9733;&#9733;&#9733;</span>
+               <p style="padding-left: 5px;background-color:white;margin:7px auto;background-color:lightgray"><b>Food Item:</b> Beef Carnival Pizza</p>
+               <span style="padding-left: 5px;background-color: white;margin:6px auto;background-color:lightgray"><b>Food Rating:</b>&#9733;&#9733;&#9733;</span>
+               <p style="padding-left: 5px;margin:6px auto;background-color:lightgray"><b>Description:</b> The pizza was too good and cheesy.
                                              Must try item.</p>
-                <img src="pizza1.jpg"  width="100" height="80" style="margin:10px auto;">
-                <img src="pizza2.jpg"  width="100" height="80" style="margin:10px auto;">
+                <img src={% static 'home/pizza1.jpg'%} width="100" height="80" style="margin:10px auto;">
+                <img src={% static 'home/pizza2.jpg'%}  width="100" height="80" style="margin:10px auto;">
                 <br>
                 <div class="stars"style="margin-right:700px">
                     <span style="font-size:20px;margin-left:0px;color:black;"><b>Rate Reviewer:</b></span>
@@ -84,7 +88,7 @@
                 </div>
 
                 <div style="float:right;margin:-30px 550px">
-					<a href="#" style="background-color:white;color: black;font-size:20px; margin:6px auto;"
+					<a href="#" style="background-color:lightgray;color: black;font-size:20px; margin:6px auto;"
 					button onclick="document.getElementById('popup').style.display='none'"><b>Comment</b></a>
 				</div>
                 <hr>
@@ -95,20 +99,20 @@
     <div style="padding-left: 120px;margin:25px">
 
         <span style="text-decoration: double;">
-			<img src="person.png" width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid;">
+			<img src={% static 'home/person.png'%} width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid;background-color:lightgray">
         </span>
 
         <div style="padding-left:100px;margin: -60px 5px;">
-            <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;"><b> Samia Ellin</b></p>
-                <p style="padding-left: 5px;background-color:white;margin:10px auto;"><b>Restaurant Name:</b> Melt Town</p>
-                <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Restaurant Rating:</b> &#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <p style="padding-left: 5px;background-color:white;margin:7px auto;"><b>Food Item:</b> Pasta Basta</p>
-                <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Food Rating:</b> &#9733;&#9733;&#9733;&#9733;</span>
-                <p style="padding-left: 5px;margin:6px auto;"><b>Description:</b> Amazing taste. Best pasta ever. Amazing offer going on. 3 baked pasta at tk. 399.<br/> And a good place to hangout with friends.</p>
-                <img src="Pasta.jpg"  width="100" height="80" style="margin:10px auto;">
+            <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;background-color:lightgray"><b> Samia Ellin</b></p>
+                <p style="padding-left: 5px;background-color:white;margin:10px auto;background-color:lightgray"><b>Restaurant Name:</b> Melt Town</p>
+                <span style="padding-left: 5px;background-color: white;margin:6px auto;background-color:lightgray"><b>Restaurant Rating:</b> &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <p style="padding-left: 5px;background-color:white;margin:7px auto;background-color:lightgray"><b>Food Item:</b> Pasta Basta</p>
+                <span style="padding-left: 5px;background-color: white;margin:6px auto;background-color:lightgray"><b>Food Rating:</b> &#9733;&#9733;&#9733;&#9733;</span>
+                <p style="padding-left: 5px;margin:6px auto;background-color:lightgray"><b>Description:</b> Amazing taste. Best pasta ever. Amazing offer going on. 3 baked pasta at tk. 399.<br/> And a good place to hangout with friends.</p>
+                <img src={% static 'home/Pasta.jpg'%}  width="100" height="80" style="margin:10px auto;background-color:lightgray">
 
                 <br>
-                <div class="stars1"style="margin-right:700px">
+                <div class="stars1"style="margin-right:700pxbackground-color:lightgray">
                     <span style="font-size:20px;margin-left:00px;color:black;"><b>Rate Reviewer:</b></span>
                     <input class="star star-f5" id="star-f5" type="radio" name="star1"/>
                     <label class="star star-f5" for="star-f5"></label>
@@ -122,8 +126,8 @@
                     <label class="star star-f1" for="star-f1"></label>
                 </div>
 				
-				<div style="float:right;margin:-30px 550px">
-					<a href="#" style="background-color:white;color: black;font-size:20px; margin:6px auto;"
+				<div style="float:right;margin:-30px 550px;background-color:lightgray">
+					<a href="#" style="background-color:lightgray;color: black;font-size:20px; margin:6px auto;"
 					button onclick="document.getElementById('popup').style.display='none'"><b>Comment</b></a>
 				</div>
 				
@@ -231,7 +235,7 @@
 				</div>
 			</div>
 			<hr>
-			<img src="Footer.png" width="200" height="60"style="padding-left:40px">
+			<img src={% static 'home/Footer.png'%}width="200" height="60"style="padding-left:40px">
 			<br>
 			<p style="color:white;font-size:18px;padding-left:40px;">© 2018 Khawoon. All Rights Reserved.</p>
 		</div>

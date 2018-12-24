@@ -2,6 +2,7 @@ from django.shortcuts import render,HttpResponse,redirect,HttpResponseRedirect
 from django.db.models import  Q
 from django.urls import reverse
 from .models import restaurant
+from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 
 from django.template.context_processors import csrf
 from django.contrib.auth import (
@@ -110,5 +111,27 @@ def search(request):
  template='home/search.html'
  query=request.GET.get('q')
  results=restaurant.objects.filter(Q(name__icontains=query) | Q(tag__icontains=query))
+
+
  return render(request,template)
+
+def search_list(request):
+ template='home/search.html'
+ query = request.GET.get('q')
+ foods=restaurant.objects.filter(Q(name__icontains=query) | Q(tag__icontains=query))
+ paginator=Paginator(foods,2)
+ page=request.GET.get('page')
+ try:
+  iteams=paginator.page(page)
+ except PageNotAnInteger:
+   iteams=paginator.page(1)
+ except EmptyPage:
+  iteams=paginator.page(paginator.num_pages)
+ context={
+  'iteams':iteams
+ }
+
+ return render(request,template,context)
+
+
 
