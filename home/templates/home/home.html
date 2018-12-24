@@ -119,40 +119,46 @@
             navbar.classList.remove("sticky");
         }
     }
-</script>
 
-<script>
-    var slideIndex = 2;
-    showDivs(slideIndex);
+    var slider = new Vue({
+        el: '#slider',
+        data: {
+            slideIndex: 2,
 
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
+        },
+        mounted: function () {
+            this.carousele(this.slideIndex + 1);
+        },
 
-    function showDivs(n) {
-        var i;
-        console.log(n);
-        var x = document.getElementsByClassName("img-slide");
-        if (n >= x.length) {
-            slideIndex = 2;
-        }
-        if (n === 1) {
-            slideIndex = x.length - 1;
-        }
+        methods: {
+            carousele: function (n) {
+                var i;
+                var self = this;
+                console.log(n);
+                var x = document.getElementsByClassName("img-slide");
+                if (n >= x.length) {
+                    slideIndex = 2;
+                }
+                if (n === 1) {
+                    slideIndex = x.length - 1;
+                }
+                if (n <= x.length) {
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                }
 
-        if (n <= x.length) {
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+                x[this.slideIndex].style.display = "inline";
+                x[this.slideIndex - 1].style.display = "inline";
+                x[this.slideIndex - 2].style.display = "inline";
+
+                setTimeout(function () {
+                    self.carousele(self.slideIndex++);
+                }, 2000); // Change image every 2 seconds
             }
         }
-
-        x[slideIndex].style.display = "inline";
-        x[slideIndex - 1].style.display = "inline";
-        x[slideIndex - 2].style.display = "inline";
-
-    }
+    });
 </script>
-
 
 
 
