@@ -1,5 +1,6 @@
 from django.conf.urls import url,include
 from . import views
+from .views import search
 from  django.contrib.auth import (login)
 
 
@@ -17,7 +18,8 @@ urlpatterns = [
 
      url(r'^signup/$', views.signup, name='signup'),
     url(r'^search/$', views.search, name='search'),
-url(r'^search_list/$', views.search_list, name='search_list')
+    url(r'^bashmoti/$',views.bash,name='bash'),
+    url(r'^skiplogin/$',views.slogin,name='skip'),
 
 
 

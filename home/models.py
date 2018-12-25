@@ -21,3 +21,6 @@ class restaurant(models.Model):
 
 
 
+
+
+

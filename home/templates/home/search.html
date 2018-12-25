@@ -7,9 +7,30 @@
      {% for obj in iteams %}
 
 
-         <p>{{  obj.name }}</p>
 
-        <img src="{{ obj.logo.url}}" />
+
+
+          <div style="   width: 100% ;margin: 0;border: darkred;margin-top: 5%">
+
+                <div style=" padding: 0;background-color: #cccccc;float: left;margin-right: 5px;margin-bottom: 5px;">
+                <p>
+
+                    {% if obj.id == 1 %}
+
+                   <p> <a href="sultanres.html">
+
+                    {% else  %}
+                     <p> <a href={% url "bash" %}>
+                    {% endif %}
+                    <img src={{ obj.logo.url }} width="320px" height="160" style="padding: 0;margin: 3px;">
+                    </a></p>
+                    <p style="background-color: #cccccc; margin: 0;padding: 10px">
+                      {{ obj.name }}
+                        <br><span style="background-color: #cccccc"> Rate: &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </p>
+                    </p>
+                </div>
+          </div>
 
 
      {% endfor %}
@@ -22,4 +43,4 @@
 
 
 
- {% endblock %}
+      {% endblock %}

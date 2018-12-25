@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <title>Khawoon | Sign Up</title>
+
+    <link rel="stylesheet" href="logSign.css">
+
+</head>
+<body>
+<div class="slider">
+    <div class="load">
+    </div>
+    <div id= "FA" class="content">
+        <div class="form-area">
+            <div class="img-area">
+                <img src="logo.png" alt="" >
+            </div>
+            <h2>SignUp Form</h2>
+            <p>Enter Name:</p>
+            <input type="text">
+            <p>Enter Email</p>
+            <input type="email">
+            <p>Enter Password</p>
+            <input type="password">
+
+            <input class="btn" button onclick="myFunction()" type="submit" value="Sign Up">
+
+
+        </div>
+    </div>
+	
+	<div id="PopUp">
+			<a href="#" class="closeBtn"button onclick="myFunction1()">&times;</a>
+            <input id= "PP" type="text" style="margin: 80px -100px;">
+    </div>
+	
+</div>
+
+<script>
+	function myFunction() {
+	var x = document.getElementById("PopUp");
+	var y = document.getElementById("FA");
+		if (x.style.display === "none") {
+			y.style.display = "none";
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
+	
+	function myFunction1() {
+	var x = document.getElementById("PopUp");
+	var y = document.getElementById("FA");
+		if (y.style.display === "none") {
+			x.style.display = "none";
+			y.style.display = "block";
+		} else {
+			y.style.display = "none";
+		}
+	}	
+</script>
+
+
+</body>
+</html>
+

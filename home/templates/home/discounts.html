@@ -1,13 +1,12 @@
-
-       <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <body style='font-family:"source-sans-variable"'>
-<body bgcolor="LightGray">
 
 <head>
     <meta charset="UTF-8">
     <title>Discounts | Khawoon</title>
-    <link rel="stylesheet" href="style.css">
+    {%load static%}
+	<link rel="stylesheet" href={% static 'home/dis.css' %}>
 </head>
 <body>
 
@@ -24,16 +23,7 @@
 
         </ul>
     </div>
-    <div class="sidebar">
-        <h2 style="text-align: center;color: darkred;">Trending</h2>
-        <div style="width: 80%; margin: auto;">
-            <img src="takeout.jpeg" width="100%">
-            <img src="sultan.png" width="100%">
-            <img src="chillox.jpeg" width="100%">
-        </div>
-    </div>
-
-        <div >
+        <div style="padding-left: 200px;margin-top: 15px" >
 
             <form method='GET' action=''>
                 <input type="text" name='q' placeholder="I am Hungry for...."
@@ -50,6 +40,17 @@
             </a>
         </div>
     <div class="content" style=" display : flex ; flex-direction: column;">
+
+    <div class="row">
+        <div class="column leftside" style="height: 100%">
+            <h2 style="text-align: center;color: darkred;">Trending</h2>
+            <div style="width: 80%; margin: auto;">
+                    <img src="takeout.jpeg" width="100%">
+                    <img src="sultan.png" width="100%">
+                    <img src="chillox.jpeg" width="100%">
+            </div>
+        </div>
+<div class="column middle">
             <div style="   width: 100% ;margin: 0;border: darkred;margin-top: 2.2%">
 
                 <div style=" padding: 0;background-color: #cccccc;float: left;margin-right: 5px;margin-bottom: 5px;">
@@ -82,7 +83,20 @@
                 </div>
 
     </div>
+    </div>
+        <div class="column rightside" >
+            <h2 style="text-align: center;color: darkred;">Filter</h2>
+
+            <form>
+                <input style="border-radius: 15%;margin-left: 10%;height: 23px;width: 200px" type="text"><br>
+                <br>
+                <input style="margin-left: 70px;border-radius: 10%;box-sizing: border-box;height: 30px;width: 100px;color: #1e7e34" type="submit" value="Filter">
+            </form>
+
+
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 </body>
-

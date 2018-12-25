@@ -1,0 +1,217 @@
+body{
+    font-family: sans-serif;
+}
+ .load{
+     animation: slide 2s;
+ }
+
+.slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:center;
+    width:100%;
+    height: 97.5vh;
+    animation: slide 20s infinite;
+    display:inline-block ;
+}
+
+ @keyframes slide {
+            0%{
+                background-image: url("login_food1.jpg");
+            }
+            15%{
+                background-image: url("login_food1.jpg");
+            }
+            15.01%{
+                background-image: url("login_food2.jpg");
+            }
+            30%{
+                background-image: url("login_food2.jpg");
+            }
+            30.01%{
+                background-image: url("login_food3.jpg");
+            }
+            45%{
+                background-image: url("login_food3.jpg");
+            }
+            45.01%{
+                background-image: url("login_food4.jpg");
+            }
+            60%{
+                background-image: url("login_food4.jpg");
+            }
+            60.01%{
+                background-image: url("login_food5.jpg");
+            }
+            75%{
+                background-image: url("login_food5.jpg");
+            }
+            75.01%{
+                background-image: url("login_food6.jpg");
+            }
+            90%{
+                background-image: url("login_food6.jpg");
+            }
+            90.01%{
+                background-image: url("login_food7.jpg");
+            }
+            100%{
+                background-image: url("login_food7.jpg");
+            }
+ }
+
+#PopUp{
+    width:300px;
+    height: 250px;
+    margin: 60px auto;
+    position: relative;
+    background: rgba(0,0,0, 1);
+    text-align: center;
+    /*margin-top: 60px;*/
+    padding: 35px;
+    border: 3px solid #fff;
+    -webkit-border-radius: 70px 0 70px 0;
+    -moz-border-radius: 70px 0 70px 0;
+    border-radius: 70px 0 70px 0;
+    display: none;
+}
+		
+#PP{
+    width:100%;
+    height: 50px;
+    border-radius: 15px 0 15px 0;
+    border:2px solid #fff;
+    margin-bottom: 15px;
+    background-color: transparent;
+    color:#fff;
+}
+		
+.overlay a:hover{
+    color:#F08080;
+}
+
+.closeBtn{
+    position: absolute;
+    top: 2px;
+    right: 7px;
+    font-size: 40px;
+    color: white;
+}
+
+.form-area{
+    width:390px;
+    height: 400px;
+    margin: 60px auto;
+    position: relative;
+    background: rgba(0,0,0,.8);
+    text-align: center;
+    padding: 35px;
+    border: 3px solid #fff;
+    -webkit-border-radius: 70px 0 70px 0;
+    -moz-border-radius: 70px 0 70px 0;
+    border-radius: 70px 0 70px 0;
+}
+
+.form-area h2{
+    margin-bottom: 45px;
+    color:#fff;
+    font-size: 18px;
+}
+
+.img-area{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(230,0,0,.6);
+    position: absolute;
+    top:-5%;
+    left: 45%;
+}
+
+.img-area img{
+    width:80%;
+    padding: 10px;
+}
+
+input{
+    width:100%;
+    height: 50px;
+    border-radius: 15px 0 15px 0;
+    border:2px solid #fff;
+    margin-bottom: 15px;
+    background-color: transparent;
+    color:#fff;
+}
+
+.form-area p{
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: -10px;
+}
+
+.btn{
+    display: inline-block;
+    height: 40px;
+    width: 150px;
+    line-height: 40px;
+    overflow: hidden;
+    position:relative;;
+    text-align: center;
+    background: rgba(200,0,0,.6);
+    border-radius: 25px;
+    color:#fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bn-text{
+    display: block;
+    height: 100%;
+    position: relative;
+    top: 0;
+    -webkit-transition: top 0.6s;
+    -moz-transition: top 0.6s;
+    -ms-transition: top 0.6s;
+    -o-transition: top 0.6s;
+    transition: top 0.6s;
+    width: 100%;
+}
+
+.btn-text{
+    display: block;
+    height: 100%;
+    position: relative;
+    top: 0;
+    -webkit-transition: top 0.6s;
+    -moz-transition: top 0.6s;
+    -ms-transition: top 0.6s;
+    -o-transition: top 0.6s;
+    transition: top 0.6s;
+    width: 100%;
+}
+
+.btn:hover .btn-text{
+    top: -100%;
+}
+
+.for-pass{
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+.sign{
+    /*text-decoration: none;*/
+    display:block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
