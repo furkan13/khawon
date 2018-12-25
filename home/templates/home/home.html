@@ -3,7 +3,6 @@
         </ul><!DOCTYPE html>
 <html lang="en">
 <body style='font-family:"source-sans-variable"'>
-<body bgcolor="LightGray">
 <head>
     <meta charset="UTF-8">
     <title>Home | Khawoon</title>
@@ -24,7 +23,7 @@
                   {% if lvl == 1 %}
             <li><a href={%url "home"%} class="active">Home</a></li>
                   {% else  %}
-            <li><a href={%url "reviews"%} class="active">Reviews</a></li>
+            <li><a href={%url "Restaurants"%} class="active">Restauratns</a></li>
                       {% endif %}
             <li><a href={%url "discounts"%}>Discounts</a></li>
            <li><a href="contact.html">Contact Us</a></li>
@@ -35,7 +34,7 @@
             {%else%}
                  <li><img src={% static 'home/logo.png'%} width="80" height="50"tyle="margin-top: 6px;margin-right: 200px"></li>
             <li><a href={%url "home"%} class="active">Home</a></li>
-           <li><a href={%url "reviews"%}>Reviews</a></li>
+           <li><a href={%url "Restaurants"%}>Restaurants</a></li>
             <li><a href={%url "discounts"%}>Discounts</a></li>
            <li><a href="contact.html">Contact Us</a></li>
 			<li><a href="team.html">Team</a></li>
@@ -43,48 +42,9 @@
             <li style="float:right"><a href={%url "skip"%}>login</a></li>
           {%endif%}
     </div>
-    <div class="sidebar">
-        <h2 style="text-align: center;color: firebrick; flex: auto ">Events</h2>
-        <div style="width: 80%;margin: auto;color: honeydew; line-height: 27px">
-
-           <ul class="sidetxt">
-                <li><b>**Winter food festival**</b><br />
-                    Date: 5th January<br />
-                    From 10.00am-11.00pm<br />
-                    At Four Seasons Restaurant, Dhanmondi<br /><br /></li>
-
-                <li><b>**Fuchka festival**</b><br />
-                    Date: 28th December<br />
-                    From 11.00am-8.00pm<br />
-                    at Dhanmondi Sayeedena community Center<br /><br /></li>
-
-                <li><b>**Pitha utshab**</b><br />
-                    Date: 20th December-1st January<br />
-                    From 8.00am-4.00pm<br />
-                    At Robindro Shoroboro Dhanmondi Lake<br /><br /></li>
-
-                <li><b>**Unlimited Burger challange**</b><br />
-                    Date: 24th December-6th January<br />
-                    From 10am-6pm<br />
-                    At Takeout Banani<br /><br /></li>
-
-                <li><b>**Burger Festival**</b><br />
-                    Date: 6th January<br />
-                    From 4.00pm-10.00pm<br />
-                    At Uttara club<br /><br /></li>
-
-                <li><b>**Igloo Ice cream mania**</b><br />
-                    Date: 24th December<br />
-                    From 3.00pm-9.00pm<br />
-                    At BICC, Bashundhara</li>
-            </ul>
-
-
-
-        </div>
-    </div>
-    <div class="content" style=" display : flex ; flex-direction: column;">
-        <div >
+    
+  
+    <div style="padding-left: 200px;margin-top: 20px" >
 
             <form method='GET' action={% url "search" %}>
                 <input type="text" name="q" placeholder="I am Hungry for...." value="{{ request.GET.q }}"
@@ -100,42 +60,92 @@
 
             </a>
         </div>
-
+        
         <div >
-            <div style="   width: 100% ;margin: 0;border: darkred">
-                <p style="padding: 16px 16px ; background: firebrick; color: white; font-size: 30px; text-align: center;">
-                    Trending</p>
-                <div style="height: 200px; width: 100%">
-                    <!--<button onclick="plusDivs(-1)">&#10094;</button>-->
-                    <button style="height: 45%;position: inherit; margin-right:5px;margin-top:48px;background-color:#dd4b39;float: left" onclick="plusDivs(-1)">&#10094;</button>
-                    <div style="float: left; width: 91%">
-                        <img class="img-slide" src={% static 'home/food1.jpeg'%}       width="32%" height="220">
-                        <img class="img-slide" src={% static 'home/food2.jpg' %}       width="32%" height="220">
-                        <img class="img-slide" src={% static 'home/food3.jpeg'%}       width="32%" height="220">
-                        <img class="img-slide" src={% static 'home/food4.jpeg'%}       width="32%" height="220">
-                        <img class="img-slide" src={% static 'home/food5.jpg'%}        width="32%" height="220">
-                        <img class="img-slide" src={% static 'home/food6.png'%}        width="32%" height="220">
-                    </div>
-                    <button style="height: 45%;position: inherit;margin-top: 48px;background-color: #dd4b39" onclick="plusDivs(1)">&#10095;
-                    </button>
+            <div style="width: 100% ;margin: 0;border: darkred"></div>
+            <p style="padding: 16px 16px ; background: firebrick; color: white; font-size: 35px; text-align: center;">
+                Trending</p>
+            <div style="height: 250px; width: 100%">
+                <div style="float: left; width: 100%;margin-inside: 100px">
+                    <a href="takeout.html">    <img class="img-slide" src="Takeout_food1.jpg " width="33%" height="300" ></a>
+                    <a href="bashmoti.html">  <img class="img-slide" src="KAcchi2.jpg" width="33%" height="300"></a>
+                      <img class="img-slide" src="food3.jpg" width="33%" height="300"></span>
+               <a href="pizzaguy.html">  <img class="img-slide" src="PizzaGuy_food3.jpg" width="33%" height="300"></a>
+                    <img class="img-slide" src="food5.jpg" width="33%" height="300">
+                    <img class="img-slide" src="food2.jpg" width="33%" height="300">
+
                 </div>
+            </div>
 
+        </div>
+        <div class="content" style=" display : flex ; flex-direction: column;">
+<div class="row">
+        <div class="column left"style="background-color:pink;width: 260px;height: 440px;margin-top: 45px;padding-right: 13px">
+            <h2 style="text-align:center;color: firebrick; flex: auto; font:35px"><u><b>Events</b></u></h2>
+            <div style="width: 80%;margin: auto;color: honeydew; line-height: 27px">
 
+                <div class="slider"style="margin:-10px -23px">
+                    <div class="load">
+                    </div>
+                    <div class="content2">
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div style="width: 100%; border: darkred">
-            <p style="padding: 20px;background: antiquewhite;color: darkred;font-size: 30px;text-align: center;">Hot
+        <div class="column middleee" style=" border: darkred">
+            <p style="padding: 16px 16px;background: indianred;color: darkred;font-size: 35px;text-align: center;">Hot
                 Deals</p>
-            <img class="img-inline" src="food7.jpg" width="300px" height="160">
-            <img class="img-inline" src="food8.jpg" width="300px" height="160">
-            <img class="img-inline" src="food9.jpg" width="300px" height="160">
-            <img class="img-inline" src="food10.jpg" width="300px" height="160">
-            <img class="img-inline" src="food11.jpg" width="300px" height="160">
-            <img class="img-inline" src="food12.jpg" width="300px" height="160">
+            <img class="img-inline" src="food7.jpg" width="32.25%" height="280">
+            <a href="sultanres.html">    <img class="img-inline" src="food1.jpg" width="32.25%" height="280"></a>
+            <img class="img-inline" src="food8.jpg" width="32.25%" height="280">
+            <img class="img-inline" src="food10.jpg" width="32.25%" height="260">
+            <img class="img-inline" src="food11.jpg" width="32.25%" height="260">
+            <img class="img-inline" src="food12.jpg" width="32.25%" height="260">
         </div>
     </div>
 </div>
+    <footer id="tfooter">
+        <div id="mom" Style="width:100%;height:500px;background:black">
+            <div id="mommy" >
+
+                <div id="kid1" style="color:white;text-align:center;">
+                    <p style="font-size:25px;"><b>Discover</b></p>
+                    <p style="font-size:22px;">Home</p>
+                    <p style="font-size:22px;">Review</p>
+                    <p style="font-size:22px;">Discount</p>
+                </div>
+                <div id="kid2" style="color:white;text-align:center;">
+                    <p style="font-size:25px;"><b>Trending</b></p>
+                    <p style="font-size:22px;">Pizza</p>
+                    <p style="font-size:22px;">Pasta</p>
+                    <p style="font-size:22px;">Burger</p>
+                    <p style="font-size:22px;">Kacchi</p>
+                </div>
+                <div id="kid3" style="color:white;text-align:center;">
+                    <p style="font-size:25px;"><b>New In Town</b></p>
+                    <p style="font-size:22px;">Dhanmondi</p>
+                    <p style="font-size:22px;">Banani</p>
+                    <p style="font-size:22px;">Gulshan</p>
+                    <p style="font-size:22px;">Uttara</p>
+                </div>
+                <div id="kid4" style="color:white;text-align:center;">
+                    <p style="font-size:25px;"><b>User</b></p>
+                    <p style="font-size:22px;">Sign In</p>
+                    <p style="font-size:22px;">Create New Account</p>
+                    <p style="font-size:22px;">FAQ</p>
+                </div>
+            </div>
+            <hr>
+            <img src="Footer.png" width="200" height="60"style="padding-left:40px">
+            <br>
+            <p style="color:white;font-size:18px;padding-left:40px;">© 2018 Khawoon. All Rights Reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</body>
+</html>
 <script>
     window.onscroll = function () {
         myFunction()
@@ -151,44 +161,43 @@
             navbar.classList.remove("sticky");
         }
     }
-</script>
 
-<script>
-    var slideIndex = 2;
-    showDivs(slideIndex);
+    var slider = new Vue({
+        el: '#slider',
+        data: {
+            slideIndex: 2,
 
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
+        },
+        mounted: function () {
+            this.carousele(2);
+        },
 
-    function showDivs(n) {
-        var i;
-        console.log(n);
-        var x = document.getElementsByClassName("img-slide");
-        if (n >= x.length) {
-            slideIndex = 2;
-        }
-        if (n === 1) {
-            slideIndex = x.length - 1;
-        }
+        methods: {
+            carousele: function (n) {
+                var i;
+                var self = this;
+                console.log(n);
+                var x = document.getElementsByClassName("img-slide");
+                if (n === x.length) {
+                    n = 2;
+                }
 
-        if (n <= x.length) {
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+
+
+                x[n].style.display = "inline";
+                x[n - 1].style.display = "inline";
+                x[n - 2].style.display = "inline";
+
+                setTimeout(function () {
+                    self.carousele(++n);
+                }, 2500); // Change image every 2 seconds
             }
         }
-
-        x[slideIndex].style.display = "inline";
-        x[slideIndex - 1].style.display = "inline";
-        x[slideIndex - 2].style.display = "inline";
-
-    }
+    });
 </script>
 
-
-
-
-
-
-</body>
-</html>
+        
