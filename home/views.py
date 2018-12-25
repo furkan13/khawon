@@ -1,5 +1,11 @@
 from django.shortcuts import render,HttpResponse,redirect,HttpResponseRedirect
+from django.db.models import  Q
 from django.urls import reverse
+from .models import restaurant
+from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
+from   khawoon.config import pagination
+
+
 from django.template.context_processors import csrf
 from django.contrib.auth import (
 authenticate,
@@ -11,7 +17,7 @@ logout,
 )
 
 
-from login.models import customer
+
 
 user=get_user_model()
 
@@ -22,7 +28,12 @@ user=get_user_model()
 
 # Create your views here.
 def home(request):
- return render(request,"home/home.html")
+
+ lvl=2
+ context={
+  "lvl":lvl
+ }
+ return render(request,"home/home.html",context)
 
 
 def log_in(request):
@@ -41,7 +52,7 @@ def log_in(request):
    login(request,user)
    return HttpResponseRedirect(reverse('home'))
   else:
-   return render(request, "home/login.html")
+   return render(request, "home/LogIn.html")
 
 
 
@@ -49,7 +60,7 @@ def log_in(request):
 
 
 
- return render(request, 'home/login.html')
+ return render(request, 'home/LogIn.html')
 
 
 def log_out(request):
@@ -84,7 +95,7 @@ def signup(request):
    context={"error":'already used username'}
 
 
-   return render(request, "home/signup.html",context)
+   return render(request, "home/SignUp.html",context)
   if ret:
 
       login(request,ret)
@@ -97,9 +108,32 @@ def signup(request):
 
 
 
- return render(request, "home/signup.html")
+ return render(request, "home/SignUp.html")
 
 
+
+
+
+
+def search(request):
+ template='home/search.html'
+ query = request.GET.get('q')
+ results = restaurant.objects.filter(Q(name__icontains=query)|Q(tag__icontains=query))
+ pages=pagination(request,results,num=4)
+ context={
+     'iteams':pages[0],
+     'page_range':pages[1],
+
+ }
+
+
+
+
+ return render(request,template,context)
+def bash(request):
+ return render(request,"home/bashmoti.html")
+def slogin(request):
+ return render(request, "home/SkipLogIn.html")
 
 
 

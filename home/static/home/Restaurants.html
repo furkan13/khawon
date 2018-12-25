@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<body style='font-family:"source-sans-variable"'>
+<body bgcolor="white">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Restaurants | Khawoon</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+
+<div class="container" id="slider">
+    <div id="navbar" style="margin-bottom: 40px">
+        <ul class="sticky" style=" position: fixed;">
+            <li><img src="logo.png" width="80" height="50" style="margin-top: 6px;margin-right: 200px"></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Restaurants.html" class="active">Restaurants</a></li>
+            <li><a href="discounts.html">Discounts</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li style="float:right"><a href="login.html">Login/Sign Up</a></li>
+
+        </ul>
+    </div>
+
+    
+	
+    <div class="content" style=" display : flex ; flex-direction: column;">
+        <div >
+            <form method='GET' action=''>
+                <input type="text" name='q' placeholder="I am Hungry for...."
+                       style="border-radius: 50px;width: 400px;height: 40px;font-size: 20px;padding-left: 20px;margin-right: 30px;margin-top: 30px;margin-left: 200px;"></input>
+                IN <input type="text" name='q' placeholder="Area"
+                          style="border-radius: 50px; width: 200px; height: 40px;font-size: 20px;padding-left: 10px;margin-left: 20px"></input>
+                <span style="display: inline-block;vertical-align: middle">
+                    <input type='image' src="search.png" style="width: 55px;height: 55px ;" value='search'
+                           id="searchbtn"></input>
+                </span>
+            </form>	
+        </div>
+				
+		<div style = "width: 90%">
+			<div class="Logo1">
+				<li><a  id="RL" href="sultanres.html"><img src="SultanDine_Logo.jpg"width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Sultan's Dine</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 0177-5003218</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> Green Akshay Plaza, 146/G (old), 59 (new), Satmasjid Road Dhaka, Bangladesh</p>
+			</div>
+		</div>
+				
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href="takeout.html"><img src="Takeout_Logo.jpg"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Takeout</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01847-290010</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> 736 Rangs KB Square, Level - 3, Road - 9/a, Satmosjid Road, Dhanmondi Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href=""><img src="Madchef_Logo.jpg"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Madchef</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01749-960363</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> Plot 47, Road 11, Block H, Banani Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href="cherrryresturent.html"><img src="Cherrydrops_Logo.jpg"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Cafe Cherry Drops</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01710-513742</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> Ahmed and Kazi tower, Level 5, Road 2, 35 Dhanmondi R/A Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href="bashmoti.html"><img src="BashmatiKacchi_Logo.jpg"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Bashmati Kacchi</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01732-753096</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> 43/3/2 (1st floor) Zigatola. Near Gabtola Mosque, Moneshwer Road Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href=""><img src="Mr.Manik_Logo.jpg"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Mr. Manik</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01913-213949</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> Imperial Amin Ahmed Center, 4th Floor, House-54, Road--10/A, (Satmasjid Road) Dhanmondi Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href=""><img src="StarKabab_Logo.jpg"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> STAR kabab</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01795-201347</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> House 15, Road 17, Block C, Banani Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href="pizzaguy.html"><img src="PizzaGuy_Logo.png"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Pizza Guy</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01775-885533</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> Ahmed Tower, H.No 28/30, Floor No 09, Kemal Ataturk Ave, Banani Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href=""><img src="Preetom_Logo.jpg"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Preetom</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01788-650022</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> 30 Kemal Ataturk Avenue, Banani Dhaka Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href=""><img src="SalimKitchen_Logo.jpg"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Salam's Kitchen</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01705-525535</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> Road-10,Block-D Banani Model Town Banai Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href=""><img src="PizzaInn_Logo.png"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Pizza Inn</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01916-999666</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> Plot: 67 12th floor of Navana G H Heights Satmasjeed Road, Dhanmondi Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+		<div style = "width: 90%">
+			<hr>
+			<div class="Logo1">
+				<li><a  id="RL" href=""><img src="Sbbaro_Logo.png"  width="200" height="200" style="float:left; margin: 0.5px;"></a></li>
+			</div>
+			
+			<div style="padding-left:100px; padding-top:30px;">
+				<p style="padding-left: 5px;background-color:white;margin:10px auto; font-size: 20px;"><u><b>Restaurant Name</u> :</b> Sbbarro</p>
+				<p style="padding-left: 5px;background-color: white;margin:10px auto;font-size: 20px;"><u><b>Restaurant Rating</u> :</b></p><p style="color: darkorange; font-size: 28px; margin: -40px 350px;">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+				<p style="padding-left: 5px;background-color:white;margin:40px; font-size: 20px;"><u><b>Contact Number</u> :</b> 01999-075000</p>
+				<p style="padding-left: 5px;background-color:white;margin:-30px; font-size: 20px;"><u><b>Address</u> :</b> 155/A, North Gulshan Avenue, Gulshan-2 Dhaka, Bangladesh</p>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<footer id="tfooter">
+		<div id="mom" Style="width:100%;height:500px;background:black">
+			<div id="mommy" >
+
+				<div id="kid1" style="color:white;text-align:center;">
+					<p style="font-size:25px;"><b>Discover</b></p>
+					<p style="font-size:22px;">Home</p>
+					<p style="font-size:22px;">Review</p>
+					<p style="font-size:22px;">Discount</p>
+				</div>
+				<div id="kid2" style="color:white;text-align:center;">
+					<p style="font-size:25px;"><b>Trending</b></p>
+					<p style="font-size:22px;">Pizza</p>
+					<p style="font-size:22px;">Pasta</p>
+					<p style="font-size:22px;">Burger</p>
+					<p style="font-size:22px;">Kacchi</p>
+				</div>
+				<div id="kid3" style="color:white;text-align:center;">
+					<p style="font-size:25px;"><b>New In Town</b></p>
+					<p style="font-size:22px;">Dhanmondi</p>
+					<p style="font-size:22px;">Banani</p>
+					<p style="font-size:22px;">Gulshan</p>
+					<p style="font-size:22px;">Uttara</p>
+				</div>
+				<div id="kid4" style="color:white;text-align:center;">
+					<p style="font-size:25px;"><b>User</b></p>
+					<p style="font-size:22px;">Sign In</p>
+					<p style="font-size:22px;">Create New Account</p>
+					<p style="font-size:22px;">FAQ</p>
+				</div>
+			</div>
+			<hr>
+			<img src="Footer.png" width="200" height="60"style="padding-left:40px">
+			<br>
+			<p style="color:white;font-size:18px;padding-left:40px;">© 2018 Khawoon. All Rights Reserved.</p>
+		</div>
+	</footer>
+
+       
+</body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <title>Khawoon | log In</title>
+
+	<link rel="stylesheet" href="logSign.css">
+
+</head>
+<body>
+<div class="slider">
+	<div class="load">
+	</div>
+	<div class="content">
+	<div class="form-area">
+		<div class="img-area">
+			<img src="logo.png" alt="" >
+		</div>
+		<h2>Login Form</h2>
+		<p>User Name:</p>
+		<input type="text">
+		<p>Password</p>
+		<input type="password">
+
+        <input class="btn" type="submit" value="Log In">
+
+		<a href="#" class="for-pass">Forget Password?</a>
+
+		<a href="SignUp.html" class="sign">Sign Up</a>
+
+	</div>
+	</div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#login',
+        data: {
+            message: 'Hello Vue!',
+            username: '',
+            password: '',
+        },
+
+        methods: {
+            goToHome: function () {
+                window.location.href = 'reviews.html';
+            }
+        }
+    }  )
+</script>

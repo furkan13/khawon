@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <title>Khawoon | log In</title>
+
+    {%load static%}
+	<link rel="stylesheet" href={% static 'home/logSign.css' %}>
+
+</head>
+<body>
+<div class="slider">
+    <div class="load">
+    </div>
+    <div class="content">
+	
+		<div class="form-area">
+            <div class="img-area">
+                <img src={% static "home/logo.png" %}alt="" >
+            </div>
+            <h2>Login Form</h2>
+            <p>User Name:</p>
+         <form method ="POST">
+                    {% csrf_token %}
+		<input type="text" name="username" placeholder="Enter Username" required v-model=username>
+		<p>Password</p>
+		 <input type="Password" name="password" placeholder="Enter Password" required v-model="password">
+
+            <input class="btn" type="submit" value="Log In">
+
+
+		<a href="#" class="for-pass">Forget Password?</a>
+
+		<a href={%url "signup"%} class="sign">Sign Up</a>
+        </div>
+        
+
+            <a href={% url "home" %} style="float: right;margin: -50px 50px;font-weight: bold;font-size: 20px;color:red;">Skip LogIn</a>
+    </div>
+	
+</div>
+
+</body>
+</html>
