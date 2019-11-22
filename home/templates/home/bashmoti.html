@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -21,20 +21,20 @@
              {%if user.is_authenticated%}
             <li><img src={% static 'home/logo.png'%} width="80" height="50"style="margin-top: 6px;margin-right: 200px"></li>
             <li><a href={%url "home"%} class="active">Home</a></li>
-            <li><a href={%url "reviews"%}>Reviews</a></li>
+           <li><a href={%url "restaurant"%}>Restaurantes</a></li>
             <li><a href={%url "discounts"%}>Discounts</a></li>
-           <li><a href="contact.html">Contact Us</a></li>
-			<li><a href="team.html">Team</a></li>
+        <li><a href={% url "contact" %}>Contact Us</a></li>
+			<li><a href={% url "team" %}>Team</a></li>
                  <li style="float:right"><a href={%url "login"%}>Account</a></li>
             <li style="float:right"><a href={%url "logout"%}>logout</a></li>
 
             {%else%}
                  <li><img src={% static 'home/logo.png'%} width="80" height="50"tyle="margin-top: 6px;margin-right: 200px"></li>
             <li><a href={%url "home"%} class="active">Home</a></li>
-           <li><a href={%url "reviews"%}>Reviews</a></li>
+         <li><a href={%url "restaurant"%}>Restaurantes</a></li>
             <li><a href={%url "discounts"%}>Discounts</a></li>
-           <li><a href="contact.html">Contact Us</a></li>
-			<li><a href="team.html">Team</a></li>
+          <li><a href={% url "contact" %}>Contact Us</a></li>
+			<li><a href={% url "team" %}>Team</a></li>
            <li style="float:right"><a href={%url "skip"%}>Login</a></li>
 
           {%endif%}
@@ -52,7 +52,7 @@
                 IN <input type="text" name="q2" placeholder="Area"
                           style="border-radius: 50px; width: 200px; height: 45px;font-size: 20px;padding-left: 10px;margin-left: 20px">
                 <span style="display: inline-block;vertical-align: middle">
-                    <input type='image' src={% static 'home/search.png'%} style="width: 50px;height: 45px ;" value='search'
+                    <input type='image' src={% static 'home/SEARCH.png'%} style="width: 50px;height: 45px ;" value='search'
                            id="searchbtn">
                 </span>
             </form>
@@ -113,16 +113,21 @@
 
             <span style="text-decoration: double">
 
-            <img src="person.png" width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid;">
+            <img src={% static "home/person.png" %} width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid;">
             </span>
 
                         <div style="padding-left:100px;margin: -60px 5px;">
-                            <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;"><b> Zakir Al Mahfuj</b></p>
+                            {% if user.is_authenticated %}
+                            <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;"><b> {{   request.user.username }}</b></p>
+                                {% else %}
+                                 <div style="width:1000px;padding-left:20px;"><p style="margin:-5px auto;font-size:30px;"><b> Zakir</b></p>
+                                     {% endif %}
+
                                 <p style="padding-left: 5px;background-color:white;margin:7px auto;"><b>Food Item:</b> Kacchi</p>
                                 <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Restaurant Rating:</b> &#11088;&#11088;&#11088;&#11088;<br></span>
                                 <span style="padding-left: 5px;background-color: white;margin:6px auto;"><b>Food Rating:</b> &#11088;&#11088;&#11088;&#11088;</span>
                                 <p style="padding-left: 5px;margin:6px auto;"><b>Description:</b> Awsome Kacchi. A must try item for Jhigatola-basi.</p>
-                                <img src="biryani.jpg"  width="100" height="80" style="margin:10px auto;">
+                                <img src={% static "home/biryani.jpg" %}  width="100" height="80" style="margin:10px auto;">
 
                                 <br>
                                 <div class="stars"style="margin-right:700px">
@@ -184,7 +189,7 @@
                     <div style="padding-left: 120px;margin:25px">
 
 						<span style="text-decoration: double;">
-							<img src="person.png" width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid; margin: 50px -20px;">
+							<img src={% static "home/person.png" %}  width="80" height="60" style="border-radius: 100%;border-color:#837C83;border-style: solid; margin: 50px -20px;">
 						</span>
 
                         <div style="padding-left:100px;">
@@ -196,7 +201,7 @@
                                 <p style="padding-left: 5px;margin:6px auto;"><b>Description:</b>
                                     If you wanna taste Biye bari platter. Then you have to go Bashmoti Kacchi. I took biyebari platter.<br> Which contains Kacchi, roast, Borhani & Jorda. Kacchi was so good. Roast was perfect.<br> Borhani was best. Jorda was not good. Very bad taste of jorda.
                                     Service was so good. I think best. Environment was also so good. Price was reasonable.
-                                <img src="bash.jpg"  width="100" height="80" style="margin:10px auto;">
+                                <img src={% static "home/bash.jpg" %}  width="100" height="80" style="margin:10px auto;">
 
                                 <br>
                                 <div class="stars1"style="margin-right:700px">
@@ -281,7 +286,7 @@
 				<a href="#" class="closeBtn"button onclick="document.getElementById('popup').style.display='none'">&times;</a>
 				
 				<div style="text-align: center">
-					<img src="logo.png" class="img">
+					<img src={% static "home/logo.png" %} class="img">
 				</div>
 
 				<div class="Form">
@@ -368,7 +373,7 @@
             </div>
         </div>
         <hr>
-        <img src="Footer.png" width="200" height="60"style="padding-left:40px">
+        <img src={% static "home/Footer.png" %} width="200" height="60"style="padding-left:40px">
         <br>
         <p style="color:white;font-size:18px;padding-left:40px;">© 2018 Khawoon. All Rights Reserved.</p>
     </div>

@@ -19,8 +19,12 @@
 
                    <p> <a href="sultanres.html">
 
-                    {% else  %}
+                    {% elif obj.id == 2 %}
                      <p> <a href={% url "bash" %}>
+                        {% elif obj.id == 3 %}
+                          <p> <a href={% url "take" %}>
+                        {% elif obj.id == 6 %}
+                         <p> <a href={% url "cherry" %}>
                     {% endif %}
                     <img src={{ obj.logo.url }} width="320px" height="160" style="padding: 0;margin: 3px;">
                     </a></p>

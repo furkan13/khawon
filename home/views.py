@@ -50,7 +50,7 @@ def log_in(request):
   print(user)
   if user:
    login(request,user)
-   return HttpResponseRedirect(reverse('home'))
+   return HttpResponseRedirect(reverse('bash'))
   else:
    return render(request, "home/LogIn.html")
 
@@ -70,7 +70,7 @@ def log_out(request):
 
 
 def reviews(request):
- return render(request, 'home/reviews.html')
+ return render(request, 'home/Restaurants.html')
 def discounts(request):
  return render(request, 'home/discounts.html')
 def signup(request):
@@ -133,7 +133,50 @@ def search(request):
 def bash(request):
  return render(request,"home/bashmoti.html")
 def slogin(request):
- return render(request, "home/SkipLogIn.html")
+ if request.method == "POST":
+  print(request.POST)
+
+  username = request.POST.get('username')
+  password = request.POST.get('password')
+
+
+  user = authenticate(request, username=username, password=password)
+  print(user)
+  if user:
+   login(request,user)
+   return HttpResponseRedirect(reverse('home'))
+  else:
+   return render(request, "home/SkipLogIn.html")
+
+
+
+
+
+
+
+ return render(request, 'home/SkipLogIn.html')
+
+
+def sultan(request):
+ return render(request,"home/sultanres.html")
+
+
+def take(request):
+ return render(request,"home/takeout.html")
+def team(request):
+ return render(request,"home/team.html")
+def cherry(request):
+ return render(request,"home/cherrryresturent.html")
+def contact(request):
+ return render(request,"home/contact.html")
+
+
+def filter(request):
+ return render(request,"home/searchd.html")
+
+
+
+
 
 
 

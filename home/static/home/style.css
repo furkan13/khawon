@@ -90,14 +90,14 @@ li a:hover {
 }
 
 .sidebar {
-    width: 19%;
+    width: 25%;
     height: 80%;
     display: block;
     margin-top: 112px;
     margin-right: 1%;
     padding-bottom: 30px;
     background: aliceblue;
-    overflow: auto;
+    overflow: hidden;
     float: left;
     font-size: 20px;
 }

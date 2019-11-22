@@ -266,9 +266,9 @@ li a:hover {
     transition: all 0.25s;
 }
 .img-inline:hover{
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1);
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3);
 }
 
 .searchbtn {
@@ -416,9 +416,8 @@ li a:hover {
 .column.rightside{
     margin-top: 170px;
     margin-right: 1%;
-    padding-bottom: 30px;
     float: right;
-    width: 18%;
+    width: 19%;
     background-color: blanchedalmond;
 }
 
@@ -427,7 +426,7 @@ li a:hover {
     display: block;
     margin-top: 38px;
     margin-right: 1%;
-    width: 50%;
+    width: 53%;
 
 }
 
@@ -441,7 +440,7 @@ li a:hover {
     width: 35%;
 }
 .column.middleee{
-    width: 75%;
+    width: 77%;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
@@ -583,20 +582,6 @@ input[type=text], iput[type=text], input[type=file]{
     border:2px solid #ccc;
     background-color:#ff4d4d;
     color:white;
-}
-
-.fil{
-    width:250px;
-    height: 250px;
-    margin: 60px auto;
-    position: absolute;
-    background: rgb(200,100,100,0.8);;
-    text-align: center;
-    padding: 35px;
-    border: 3px solid red;
-    -webkit-border-radius: 70px 0 70px 0;
-    -moz-border-radius: 70px 0 70px 0;
-    border-radius: 70px 0 70px 0;
 }
 
 

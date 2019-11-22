@@ -18,15 +18,22 @@
                 <img src={% static "home/logo.png" %} alt="" >
             </div>
             <h2>SignUp Form</h2>
+            <div>
+                <p style="padding-left: 5px;color: red;  border: 1px solid #ccc; border-radius: 10px;margin: -1">{{ error }}</p></div>
+             <form method ="POST">
+                    {% csrf_token %}
             <p>Enter Name:</p>
-            <input type="text">
+           <input type="text" name="username" placeholder="Enter Username" required v-model=username>
             <p>Enter Email</p>
-            <input type="email">
+            <input type="text" name="email" placeholder="Enter email adress" required v-model="email">
             <p>Enter Password</p>
-            <input type="password">
+               <input type="Password" name="password" placeholder="Enter Password" required v-model="password">
 
-            <a href="#" class="btn" button onclick="myFunction()">
-                <span class="bn-text">Sign Up</span>
+          <input class="btn" type="submit" value="Sign In">
+
+
+
+            </form>
             </a>
 
 

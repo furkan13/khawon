@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Contact | Khawoon</title>
+    <{%load static%}
+     <link rel="stylesheet" href={% static 'home/style.css' %}>head>
+</head>
+<style>
+
+
+    .column {
+        float: left;
+        padding: 10px;
+    }
+
+    /* Left and right column */
+    .column.leftside {
+        width: 70%;
+
+    }
+
+    .column.right {
+        float: right;
+        width: 25%;
+    }
+
+    .column.right input[type=text], input[type=password] {
+        padding: 13px 15px;
+        margin: 12px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        top: 20%;
+        width: 100%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column.side, .column.middle {
+            width: 100%;
+        }
+    }
+
+    button {
+        background-color: green;
+        color: whitesmoke;
+        padding: 13px 15px;
+        margin: 8px;
+        border: 2px;
+        border-style: solid;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 50%;
+        font-family: "sans-serif";
+        font-size: 20px;
+
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>
+<body>
+
+
+<div class="container" id="slider">
+    <div id="navbar" style="margin-bottom: 40px">
+        <ul class="sticky" style=" position: fixed;">
+            {%if user.is_authenticated%}
+
+            <li><img src={% static 'home/logo.png'%} width="80" height="50"style="margin-top: 6px;margin-right: 200px"></li>
+
+            <li><a href={%url "home"%} >Home</a></li>
+
+            <li><a href={%url "restaurant"%} >Restauratns</a></li>
+
+            <li><a href={%url "discounts"%}>Discounts</a></li>
+          <li><a href={% url "contact" %}>Contact Us</a></li>
+			<li><a href={% url "team" %}>Team</a></li>
+                 <li style="float:right"><a href={%url "login"%}>Account</a></li>
+            <li style="float:right"><a href={%url "logout"%}>logout</a></li>
+
+            {%else%}
+                 <li><img src={% static 'home/logo.png'%} width="80" height="50"tyle="margin-top: 6px;margin-right: 200px"></li>
+            <li><a href={%url "home"%} class="active">Home</a></li>
+           <li><a href={%url "restaurant"%}>Restaurant</a></li>
+            <li><a href={%url "discounts"%}>Discounts</a></li>
+         <li><a href={% url "contact" %}>Contact Us</a></li>
+			<li><a href={% url "team" %}>Team</a></li>
+
+            <li style="float:right"><a href={%url "skip"%}>login</a></li>
+          {%endif%}
+        </ul>
+    </div>
+    <div class="row">
+        <div class="column leftside">
+            <img src={% static "home/contact.jpg" %} style="width: 100%">
+        </div>
+        <div class="column right"style="margin-top: 60px;color: darkolivegreen">
+            <form>
+                <p style="font-size: 25px">Name</p>
+                <input type="text">
+                <p style="font-size: 25px">Email</p>
+                <input type="text">
+                <p style="font-size: 25px">Message</p>
+                <textarea style="width: 330px;height: 200px;border-radius: 10px"></textarea>
+<div style="padding-left: 95px">
+                <button type="submit" value="Submit">Submit</button>
+</div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Team | Khawoon</title>
+    <{%load static%}
+   <link rel="stylesheet" href={% static 'home/hstyle.css' %}>
+</head>
+<body>
+<div style=" display : flex ; flex-direction: column;margin:0px" >
+
+    <div class="container" id="slider">
+        <div id="navbar" style="margin-bottom: 40px">
+            <ul class="sticky" style=" position: fixed;">
+                {%if user.is_authenticated%}
+
+            <li><img src={% static 'home/logo.png' %} width="80" height="50"style="margin-top: 6px;margin-right: 200px"></li>
+
+            <li><a href={%url "home"%} >Home</a></li>
+
+            <li><a href={%url "restaurant"%} >Restauratns</a></li>
+
+            <li><a href={%url "discounts"%}>Discounts</a></li>
+          <li><a href={% url "contact" %}>Contact Us</a></li>
+			<li><a href={% url "team" %}>Team</a></li>
+                 <li style="float:right"><a href={%url "login"%}>Account</a></li>
+            <li style="float:right"><a href={%url "logout"%}>logout</a></li>
+
+            {%else%}
+                 <li><img src={% static 'home/logo.png'%} width="80" height="50"tyle="margin-top: 6px;margin-right: 200px"></li>
+            <li><a href={%url "home"%} class="active">Home</a></li>
+           <li><a href={%url "restaurant"%}>Restaurant</a></li>
+            <li><a href={%url "discounts"%}>Discounts</a></li>
+           <li><a href={% url "contact" %}>Contact Us</a></li>
+			<li><a href={% url "team" %}>Team</a></li>
+
+            <li style="float:right"><a href={%url "skip"%}>login</a></li>
+          {%endif%}
+
+            </ul>
+        </div>
+        <div  style="width:100%;">
+            <img  src={% static "home/group.jpg" %} width="100%" height=500" >
+        </div>
+
+        <div id="topbar" style="margin-top: -5px; width:100%;height: 50px;background-color:lightblue;">
+
+                <p style="margin:5px 10px;font-size: 30px;padding:8px"><b>About "Khawoon"</b></p>
+
+        </div>
+        <div style="text-align:center;">
+            <h1 style="font-size: 40px">Why Khawoon ?</h1>
+            <p style="font-size: 20px">How Khawoon is best suited to address all your dining related queries</p>
+        </div>
+        <div  style="background:white;display:-webkit-box;-webkit-box-orient:horizontal;width:100%;
+                                      height:320px;-webkit-box-align:stretch;margin-bottom: 10px;font-size: 18px">
+
+            <div  style="background:white;padding:20px;margin:10px;-webkit-box-flex:1;height:250px;text-align:center;">
+                <img src={% static "home/Capture1.PNG" %}  width="150" height="150">
+                <p>A one stop solution to all food related queries</p>
+            </div>
+            <div  style="background:white;padding:20px;margin:10px;-webkit-box-flex:1;height:250px;text-align:center;">
+                <img src={% static "home/Capture2.PNG" %} width="150" height="150">
+                <p>Deals, menus, contact details, maps, new<br>
+                    restaurant launches, reviews - you name it!</p>
+            </div>
+            <div  style="background:white;padding:20px;margin:10px;-webkit-box-flex:1;height:250px;text-align:center;">
+                <img src={% static "home/Capture3.PNG" %} width="150" height="150">
+                <p>Search nearby places to eat or look them<br>
+                    up by name, location, type or even speciality</p>
+            </div>
+
+        </div>
+
+        <div id="bar" style="margin-top: -5px; width:100%;height: 50px;background-color:lightblue;">
+
+            <p style="margin:5px 10px;font-size: 30px;padding:8px"><b>Team "Khawoon"</b></p>
+
+        </div>
+
+        <div  style="background:white;display:-webkit-box;-webkit-box-orient:horizontal;width:100%;
+                                      height:320px;-webkit-box-align:stretch;margin-bottom: 10px;font-size: 18px">
+
+            <div  style="background:white;border-radius:10px;border:2px solid gray;padding:20px;margin:10px;
+                         -webkit-box-flex:1;height:250px;text-align:center;">
+                <img src={% static "home/fur.jpg" %}  width="100" height="100" style="border-radius: 50%">
+                <p><b>Name: Furkan Alahi<br>ID: 011 161 212<br><br> Contribution: </b> Project idea, Site <br>map, Mock ups, Back-end.</p>
+
+            </div>
+
+            <div  style="background:white;border-radius:10px;border:2px solid gray;padding:20px;margin:10px;
+                         -webkit-box-flex:1;height:250px;text-align:center;">
+                <img src={% static "home/mai.jpg" %} width="100" height="100" style="border-radius: 50%">
+                <p><b>Name: Maisha Farzana<br>ID: 011 161 237<br><br> Contribution: </b> Designing, UML <br>Diagrams, Front-end.</p>
+
+            </div>
+
+            <div  style="background:white;border-radius:10px;border:2px solid gray;padding:20px;margin:10px;
+                         -webkit-box-flex:1;height:250px;text-align:center;">
+                <img src={% static "home/abu.jpg" %} width="100" height="100" style="border-radius: 50%">
+                <p><b>Name: Abu Saleh Md. Abir<br>ID: 011 161 225<br><br> Contribution: </b> Project idea, Bench-<br>mark, Studies, UML Diagrams,<br> Back-end.</p>
+
+            </div>
+
+            <div  style="background:white;border-radius:10px;border:2px solid gray;padding:20px;margin:10px;
+                         -webkit-box-flex:1;height:250px;text-align:center;">
+                <img src={% static "home/ellu.jpg" %} width="100" height="100" style="border-radius: 50%">
+                <p><b>Name: Samia Ellin<br>ID: 011 161 235<br><br> Contribution: </b> Designing, Logo,     <br> Mock ups Front-end.</p>
+
+            </div>
+        </div>
+
+   </div>
+    <footer id="tfooter">
+        <div id="mom" Style="width:100%;height:500px;background:black">
+            <div id="mommy" >
+
+                <div id="kid1" style="color:white;text-align:center;">
+                    <p style="font-size:25px;"><b>Discover</b></p>
+                    <p style="font-size:22px;">Home</p>
+                    <p style="font-size:22px;">Review</p>
+                    <p style="font-size:22px;">Discount</p>
+                </div>
+                <div id="kid2" style="color:white;text-align:center;">
+                    <p style="font-size:25px;"><b>Trending</b></p>
+                    <p style="font-size:22px;">Pizza</p>
+                    <p style="font-size:22px;">Pasta</p>
+                    <p style="font-size:22px;">Burger</p>
+                    <p style="font-size:22px;">Kacchi</p>
+                </div>
+                <div id="kid3" style="color:white;text-align:center;">
+                    <p style="font-size:25px;"><b>New In Town</b></p>
+                    <p style="font-size:22px;">Dhanmondi</p>
+                    <p style="font-size:22px;">Banani</p>
+                    <p style="font-size:22px;">Gulshan</p>
+                    <p style="font-size:22px;">Uttara</p>
+                </div>
+                <div id="kid4" style="color:white;text-align:center;">
+                    <p style="font-size:25px;"><b>User</b></p>
+                    <p style="font-size:22px;">Sign In</p>
+                    <p style="font-size:22px;">Create New Account</p>
+                    <p style="font-size:22px;">FAQ</p>
+                </div>
+            </div>
+            <hr>
+            <img src={% static "home/Footer.png" %} width="200" height="60"style="padding-left:40px">
+            <br>
+            <p style="color:white;font-size:18px;padding-left:40px;">© 2018 Khawoon. All Rights Reserved.</p>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
